@@ -1,0 +1,240 @@
+---
+Começando meu projeto em R (Notebook)
+---
+
+
+```{r}
+#Diretório onde está o projeto.
+getwd()
+setwd("c:\\dados")
+```
+
+
+```{r}
+#Saber o tipo do objeto
+class(iris)
+
+```
+
+
+
+```{r}
+#Salvar um objeto
+
+#Clonar o iris para fazer o teste:
+iristeste = iris
+
+#Salvar em um documento:
+save(iristeste, file = "iristeste.Rdata")
+
+#remover do R
+rm(iristeste)
+
+iristeste
+
+```
+
+
+```{r}
+#LoadArquivo
+
+load(file="iristeste.Rdata")
+
+```
+
+```{r}
+#Vetor e gráfico basico
+x= c(1,6,8,10)
+y= c(1,2,3,4)
+plot(x,y)
+```
+
+```{r}
+#Declaração implicita numérica(Tem uma tabela que indica oque é 8, 8L e etc)
+
+delta = 8
+class("delta")
+
+```
+
+```{r}
+#Variavél tipo inteiror(8L)
+
+delta = 8L
+class("delta")
+
+```
+```{r}
+#Outros tipos:
+
+logico = TRUE
+logico = F
+character = "Texto"
+character = 'Texto'
+class('logico')
+class('character')
+```
+
+```{r}
+#Operações matematicas:
+
+c = 28
+d = 38
+a = 2
+e = (c+d)*a
+
+e
+
+```
+
+```{r}
+#Testes lógicos:
+
+a = 6
+b = 6
+
+
+a > b
+a == b
+
+
+```
+
+
+```{r}
+#Raiz quadrada
+
+sqrt(50*4)
+
+```
+
+###Estruturas de dados###
+
+```{r}
+#VETORES
+x = c(1,2,3,4,5,6)
+
+x
+x[3] = 30
+x[3]
+```
+
+```{r}
+#VETORES DE OUTROS TIPOS
+
+x = c("a","b","c","d")
+x
+
+y = c(1L,2L,3L,4L)
+y
+
+```
+#MATRIZES
+```{r}
+VADeaths
+colnames(VADeaths)
+rownames(VADeaths)
+
+```
+#Visão customizavel da Matriz
+```{r}
+#Só a coluna 1(Virgula antes dos numeros)
+VADeaths[,1]
+#Só a linha 1(Virgula depois dos numeros)
+VADeaths[1,]
+#Linhas de 1 a 3
+VADeaths[1:3,]
+#Posições especificas
+VADeaths[c(1,3,4),]
+```
+
+#DataFrame
+```{r}
+longley
+#Projetando colunas(Parecido com matriz)
+longley [,1:3]
+#Acessar a coluna com $
+longley$Unemployed
+#Ou por nome
+longley['Unemployed']
+
+```
+
+```{r}
+ability.cov
+#Acessando Elementos
+ability.cov[1]
+ability.cov[2]
+ability.cov[3]
+ability.cov$cov
+ability.cov$center
+ability.cov$n.obs
+#Acessando elementos dentro da lista
+ability.cov$cov[,1:3]
+#Tipo dos dados
+class(ability.cov$cov)
+```
+#Fatores
+```{r}
+state.region
+class(state.region)
+```
+##Funções
+
+```{r}
+getwd()
+#sem parenteses
+sd
+head(x=iris, n=2)
+head(iris)
+head(iris,2)
+head(n=22)
+
+
+```
+##Tópicos de AJUDA
+
+```{r}
+help(sd)
+head(iris)
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
